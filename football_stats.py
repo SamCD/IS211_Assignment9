@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
+import urllib2
 
-page = urlopen('http://www.cbssports.com/'\
+page = urllib2.urlopen('http://www.cbssports.com/'\
                     'nfl/stats/playersort/nfl/year-2014'\
                     '-season-regular-category-touchdowns')
 soup = BeautifulSoup(page)
@@ -23,7 +23,6 @@ for link in links:
                        [5].get_text())
     except AttributeError:
         continue
-    print
 
 for i in range(20):
-    print(names[i],pos[i],teams[i],tds[i])
+    print names[i],pos[i],teams[i],tds[i]
