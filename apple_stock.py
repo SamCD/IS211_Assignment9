@@ -13,4 +13,4 @@ for link in links:
                 )[3].text
     except IndexError:
         continue
-pprint.pprint closes
+pprint.pprint(closes)
